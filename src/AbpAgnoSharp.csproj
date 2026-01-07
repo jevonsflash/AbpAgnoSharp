@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>AbpAgnoSharp</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>LinXiao</Authors>
+		<Product>AbpAgnoSharp</Product>
+		<Description>ABP Framework integration library for Agno AgentOS service. Provides complete API support for Agent, Team, Workflow, Knowledge, Traces, Memory, and Database operations.</Description>
+		<PackageTags>ABP;Agno;AgentOS;AI;Agent;Workflow;Knowledge;Memory;Traces</PackageTags>
+		<PackageProjectUrl>https://github.com/jevonsflash/AbpAgnoSharp</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jevonsflash/AbpAgnoSharp.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.jpeg</PackageIcon>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp" Version="10.0.1" />
+		<PackageReference Include="WebApiClientCore" Version="2.1.5" />
+		<PackageReference Include="WebApiClientCore.Extensions.OAuths" Version="2.1.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackagePath="\" />
+		<None Include="icon.jpeg" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>
+
