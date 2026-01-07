@@ -26,7 +26,7 @@ namespace Volo.Abp.AgnoSharp.Apis
         /// </summary>
         [HttpPost("/agents")]
         public ITask<HttpResponseMessage> PostAgents(
-            [JsonContent] object requestBody
+            [FormContent] object requestBody
         );
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Volo.Abp.AgnoSharp.Apis
         [HttpPut("/agents/{agent_id}")]
         public ITask<HttpResponseMessage> PutAgent(
             string agent_id,
-            [JsonContent] object requestBody
+            [FormContent] object requestBody
         );
 
         /// <summary>
@@ -59,16 +59,16 @@ namespace Volo.Abp.AgnoSharp.Apis
         /// <summary>
         /// Run Agent
         /// </summary>
-        [HttpPost("/agents/{agent_id}/run")]
+        [HttpPost("/agents/{agent_id}/runs")]
         public ITask<HttpResponseMessage> PostAgentRun(
             string agent_id,
-            [JsonContent] object requestBody
+            [FormContent] object requestBody
         );
 
         /// <summary>
         /// Get Agent Run
         /// </summary>
-        [HttpGet("/agents/{agent_id}/run/{run_id}")]
+        [HttpGet("/agents/{agent_id}/runs/{run_id}")]
         public ITask<HttpResponseMessage> GetAgentRun(
             string agent_id,
             string run_id,
@@ -78,7 +78,7 @@ namespace Volo.Abp.AgnoSharp.Apis
         /// <summary>
         /// Stop Agent Run
         /// </summary>
-        [HttpPost("/agents/{agent_id}/run/{run_id}/stop")]
+        [HttpPost("/agents/{agent_id}/runs/{run_id}/stop")]
         public ITask<HttpResponseMessage> PostAgentRunStop(
             string agent_id,
             string run_id
@@ -102,7 +102,7 @@ namespace Volo.Abp.AgnoSharp.Apis
         [HttpPost("/agents/{agent_id}/sessions")]
         public ITask<HttpResponseMessage> PostAgentSessions(
             string agent_id,
-            [JsonContent] object requestBody
+            [FormContent] object requestBody
         );
 
         /// <summary>
@@ -122,7 +122,7 @@ namespace Volo.Abp.AgnoSharp.Apis
         public ITask<HttpResponseMessage> PutAgentSession(
             string agent_id,
             string session_id,
-            [JsonContent] object requestBody
+            [FormContent] object requestBody
         );
 
         /// <summary>
