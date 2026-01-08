@@ -258,3 +258,24 @@ public class DatabaseClient : AgnoClient<IDatabaseApi>, IDatabaseApi
         => Api.PostMigrateDatabase(db_id, target_version);
 }
 
+
+
+/// <summary>
+/// Agno Core
+/// </summary>
+public class CoreClient : AgnoClient<ICoreApi>, ICoreApi
+{
+    public CoreClient(IOptionsMonitor<AbpAgnoSharpOptions> options, IServiceProvider serviceProvider)
+        : base(options, serviceProvider) { }
+
+    public ITask<HttpResponseMessage> GetModels()
+        => Api.GetModels();
+
+    public ITask<HttpResponseMessage> GetStatus()
+        => Api.GetStatus();
+
+    public ITask<HttpResponseMessage> GetConfig()
+        => Api.GetConfig();
+
+}
+
